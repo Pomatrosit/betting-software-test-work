@@ -1,0 +1,26 @@
+@import "./variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.primary-link {
+  color: $link;
+  text-decoration: none;
+}
+
+.secondary-link {
+  color: $active-2;
+  text-decoration: none;
+}

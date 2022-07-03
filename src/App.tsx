@@ -1,24 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from "react";
+import ManagerContainer from "./components/ManagerContainer/ManagerContainer";
+import ModalWindow from "./components/ModalWindow/ModalWindow";
+import { ModalContext } from "./context/ModalContext";
 
 function App() {
+  const { modal } = useContext(ModalContext);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ManagerContainer />
+      {modal.isOpen && <ModalWindow />}
     </div>
   );
 }

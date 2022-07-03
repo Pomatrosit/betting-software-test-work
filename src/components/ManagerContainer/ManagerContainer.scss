@@ -1,0 +1,22 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.manager-container {
+  padding-top: 50px;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  &__title {
+    color: $primary;
+    margin-bottom: 20px;
+  }
+
+  &__button-group {
+    @include flex(center, flex-start);
+    margin-top: 20px;
+  }
+
+  &__button-wrap {
+    margin-right: 20px;
+  }
+}

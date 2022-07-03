@@ -1,0 +1,36 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.radio-button {
+  width: 100%;
+  color: $primary;
+  cursor: pointer;
+  @include flex(center, space-between);
+  border: 1px solid $secondary-3;
+  border-radius: 4px;
+  height: 36px;
+  padding: 0 10px;
+
+  &__input {
+    width: 13px;
+    height: 13px;
+    border: 1px solid $secondary-4;
+    border-radius: 50%;
+    position: relative;
+
+    &_active {
+      border-color: $active;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        left: 2px;
+        bottom: 2px;
+        border-radius: 50%;
+        background-color: $active;
+      }
+    }
+  }
+}
