@@ -83,7 +83,7 @@ export const RegisterFormContent = () => {
             <Select
               key={select.name}
               {...select}
-              value={candidate.birthDay}
+              value={candidate[select.name as keyof ICandidate]}
               onChange={handleChange}
             />
           ))}
